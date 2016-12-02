@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    
+    <title>Neighborhood Map</title>
+    
+    <link rel="icon" href="img/me.jpg" type="image/x-jpg">
+    <link rel="stylesheet" href="css/bootstrap.min.css" type="text/css">
+    <link rel="stylesheet" href="css/style.css" type="text/css">
+
+</head>
+
+<body>
+    <div class="container-fluid">
+        <div class="row">
+            <section class="col-md-9 section-content">
+                <div class="row">
+                    <div class="col-sm-12" id="map"></div>
+                </div>
+                <div class="row">
+
+                    <div class="col-sm-12">
+                        <div class="we forecast">
+                            <h3>Chennai Weather Forecast</h3>
+                            <ul>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+            </section>
+            <section class="section-nav col-md-3">
+                <div class="row site-header">
+                    <div class="col-sm-12">
+                        <header>
+                            <h1>Selva's places</h1>
+                            <form>
+                                <div class="form-group">
+                                    <label for="searchbar">Search by name</label>
+                                    <input type="text" id="searchbar" name="searchbar" class="form-control" data-bind="value: search, valueUpdate: 'afterkeydown'" placeholder="Name of place">
+                                </div>
+                            </form>
+                        </header>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-sm-12">
+                        <ul data-bind="foreach: filteredItems" class="main-nav">
+                            <li data-bind="text: $data.name, click: $parent.setPlace" class="main-nav-item col-md-12 col-sm-6">Please</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+
+        </div>
+    </div>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD-5b67vu66BvcF5vAH1ikboSTpW4_Sgx4&libraries=places"></script>
+    <script src="js/jquery.min.js"></script>
+    <script src="js/knockout-3.3.0.js"></script>
+    <script src="js/app.js"></script>
+
+
+
+
+</body>
+
+</html>
